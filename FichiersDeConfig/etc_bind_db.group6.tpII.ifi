@@ -1,0 +1,34 @@
+#Informations de la base de donnée SOA
+
+@       IN SOA serveur.groupe6.tpII.ifi. root.groupe6.tpII.ifi. (
+                2005090201
+                8H
+                2H
+                4W
+                1D
+        )
+
+#Déclaration des serveurs
+
+@               IN      NS      serveur.groupe6.tpII.ifi.
+@               IN      MX      10      mail.groupe6.tpII.ifi.
+
+#Resolution des noms des différents postes
+
+serveur         IN      A       172.16.6.1
+poste1          IN      A       172.16.6.2
+poste2          IN      A       172.16.6.3
+poste3          IN      A       172.16.6.4
+poste4          IN      A       172.16.6.5
+poste5          IN      A       172.16.6.6
+
+#Déclaration des alias du serveur
+
+pop3    IN      CNAME   serveur
+mail    IN      CNAME   serveur
+smtp    IN      CNAME   serveur
+www     IN      CNAME   serveur
+
+
+
+
