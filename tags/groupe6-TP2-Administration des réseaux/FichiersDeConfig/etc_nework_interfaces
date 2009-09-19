@@ -1,0 +1,34 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+        address 172.16.6.1
+        netmask 255.255.255.0
+        broadcast 172.16.6.255
+        network 172.16.6.0
+
+auto eth1
+iface eth1 inet static
+        address 192.168.106.246
+        netmask 255.255.255.0
+        broadcast 192.168.106.255
+        network 192.168.106.0
+        gateway 192.168.106.1
+
+up route add -net 172.16.1.0/24 gw 192.168.106.241
+up route add -net 172.16.2.0/24 gw 192.168.106.242
+up route add -net 172.16.3.0/24 gw 192.168.106.243
+up route add -net 172.16.4.0/24 gw 192.168.106.244
+up route add -net 172.16.5.0/24 gw 192.168.106.245
+
+
+# The primary network interface
+#allow-hotplug eth1
+#iface eth1 inet dhcp
+
+
